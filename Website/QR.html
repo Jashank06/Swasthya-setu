@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unique</title>
+    <style>
+        #number {
+            margin-top: 150px;
+            margin-left: 134px;
+        }
+
+        #button {
+            width: 270px;
+            height: 33px;
+            border-radius: 6px;
+            margin-left: 120px;
+            font-size: 23px;
+            font-weight: bold;
+            background-color: #76e5ef;
+            cursor: pointer;
+        }
+
+
+        .qr-code {
+            opacity: 0;
+            display: flex;
+            padding: 33px 0;
+            border-radius: 5px;
+            align-items: center;
+            pointer-events: none;
+            justify-content: center;
+            /* height: 900px; */
+            /* border: 1px solid #ccc; */
+            /* margin-right: 40px; */
+        }
+
+        .wrapper.active .qr-code {
+            margin-right: 730px;
+            opacity: 1;
+            pointer-events: auto;
+            transition: opacity 0.5s 0.05s ease;
+        }
+
+        .qr-code img {
+            width: 250px;
+            height: 250px;
+        }
+
+        @media (max-width: 430px) {
+            .wrapper {
+                height: 255px;
+                padding: 16px 20px;
+            }
+
+            .wrapper.active {
+                height: 510px;
+            }
+
+            header p {
+                color: #696969;
+            }
+
+            .form :where(input, button) {
+                height: 52px;
+            }
+
+            .qr-code img {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 align="center" style="font-size: 55px; margin-left: 100px; color: rgb(8, 48, 84)";>Get the information</h2>
+    <section id="number">
+        <div id="unique">
+            
+            <form>
+                <label for="unique" style="font-size: 23px; margin-bottom: 500px;"><strong>Enter your unique
+                        number:&nbsp;</strong></label>
+                <input type="number" name="myUnique" id="unique" style="border-radius: 5px; height: 25px;width: 200px;"
+                    placeholder="Enter 10-digit number"><br><br>
+                <button id="button">Log in</button>
+            </form> <br>
+            <h1 style="margin-left: 200px;">OR</h1><br>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper">
+            <div class="form">
+                <label for="qr" style="font-size: 23px; margin-bottom: 500px;margin-left: 140px;"><strong>Enter your
+                        mobile number:&nbsp;</strong></label>
+                <input type="text" spellcheck="false" placeholder="Enter your mobile number"
+                    style="border-radius: 5px; height: 25px;width: 230px;"> <br><br>
+                <button
+                    style="margin-left: 250px;height: 33px;width: 290px;border-radius: 5px;font-weight: bold; font-size: 18px;background-color: #76e5ef ;">Generate
+                    QR code</button>
+                <div class="qr-code">
+                    <img src="img/qr-code.jpg">
+                </div>
+                <img src="img/login.jpg" style="margin-left: 850px;margin-top: -800px; height: 623px;">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const wrapper = document.querySelector(".wrapper"),
+            qrInput = wrapper.querySelector(".form input"),
+            generateBtn = wrapper.querySelector(".form button"),
+            qrImg = wrapper.querySelector(".qr-code img");
+        let preValue;
+
+        generateBtn.addEventListener("click", () => {
+            let qrValue = qrInput.value.trim();
+            if (!qrValue || preValue === qrValue) return;
+            preValue = qrValue;
+            generateBtn.innerText = "Generating QR Code...";
+            qrImg.src ="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}";
+            qrImg.addEventListener("load", () => {
+                wrapper.classList.add("active");
+                generateBtn.innerText = "Generate QR Code";
+            });
+        });
+
+        qrInput.addEventListener("keyup", () => {
+            if (!qrInput.value.trim()) {
+                wrapper.classList.remove("active");
+                preValue = "";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

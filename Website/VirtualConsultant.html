@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy India</title>
+    <style>
+         header{
+            background-color: #071b31;
+            height: auto;
+            justify-content: space-around;
+     }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+        
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #164362;
+            margin-top: 2px;
+            height: 70px;
+        }
+
+        .nav a {
+            color: rgb(255, 255, 255);
+            font-size: 23px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+        }
+
+
+        #subcont {
+            position: relative;
+            left: 20px;
+            right: 10px;
+        }
+
+        ul {
+            left: -20px;
+            position: relative;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 40px;
+
+        }
+
+        .login {
+            position: relative;
+            right: -20px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+        }
+
+        .search form {
+            display: flex;
+            margin: 0;
+
+        }
+
+        .search input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            outline: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .search input:hover {
+            border: 1px solid #72a0d4;
+        }
+
+        .search button {
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+/* 
+        header {
+            color: black;
+            background-color: white;
+
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #164362;
+            color: white;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 10px;
+
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline;
+        } */
+
+        section {
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        #subcont {
+            position: relative;
+            left: 20px;
+            right: 10px;
+        }
+
+        ul {
+            left: -20px;
+            position: relative;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 40px;
+
+        }
+
+        .login {
+            position: relative;
+            right: -20px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+        }
+
+        .search form {
+            display: flex;
+            margin: 0;
+
+        }
+
+        .search input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            outline: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .search input:hover {
+            border: 1px solid #72a0d4;
+        }
+
+        .search button {
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .doctor-category {
+            background-color: white;
+            border: 3px solid #76e5ef;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 34px 19px;
+            margin: 14px 19px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-block-start: 100px;
+            width: 300px;
+
+        }
+
+        .doctor-info {
+            margin-top: 10px;
+        }
+
+        .doctor-info img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+
+        }
+
+        .doctor-info p {
+            margin: 5px 0;
+        }
+
+        .doctor-category:hover .doctor-info {
+            transition: transform 0.3 ease-in-out;
+            opacity: 1;
+        }
+
+        .doctor-category:hover {
+            transform: translate(-10px);
+            transition: transform 0.3 ease-in-out;
+            background-color: #164362;
+            color: white;
+        }
+
+        .doctor-info img:hover {
+            transition: transform 0.3 ease-in-out;
+
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .button {
+            position: absolute;
+            left: 20px;
+            top: 40%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background-color: #164362;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: none;
+        }
+        a:hover {
+      color: white;
+      background-color: black;
+      border-radius: 5px;
+    }
+
+        .button:hover {
+            background-color: #45a049;
+            cursor: pointer;
+        }
+
+        .h1 {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section>
+            <div class="container">
+                <img src="img/logo.jpg" class="logo" style="width: 100px; margin-left: 70px; width: 120px; border-radius: 50%;">
+                <img src="img/image.jpg" height="40px" width="180px" style="margin-top: 4px;margin-right: 70px ; margin-left: 30px; background-color: black; border-radius:140px">
+                <ul>
+                    
+                   
+                    <div class="search">
+                        <form>
+                            <input type="text" placeholder="Search" style="width: 500px;border: 2px solid black;">
+                        </form>
+                        <img src="img/searchImage.jpg" height="30px" width="30px" style="margin-top: 4px;margin-right: 30px;">
+                    </div>
+                    <a href="/Website/QR.html">
+                    <button
+                        style="font-size: 23px;font-weight: bold;background-color: white;width: 100px;height: 40px;border-radius: 5px;">Login</button>
+                    </a>
+                    <!-- <a href="/Website/Contact.html">
+                    <button
+                        style="font-size: 23px;font-weight: bold; background-color: #8ec5ea;width: 150px;height: 40px;border-radius: 5px;margin-right: 80px;">Contact
+                        Us</button>
+                    </a> -->
+                    <button
+                        style="font-size: 23px;font-weight: bold;background-color: white;width: 180px; height:60px; border-radius: 5px;padding: 2px,2px,2px,5px;">Helpline
+                        No.:9475884667</button>
+                </ul>
+            </div>
+        </section>
+    </header>
+        
+        <nav class="nav">
+            <a href="/Website/Home.html">Home</a>
+            <a href="/Website/VirtualConsultant.html"> Telemedicine Hub</a>
+            <a href="/Website/MobileHealthClinic.html">Mobile health clinics</a>
+            <a href="/Website/HIE.html">HIE System</a>
+            <a href="/Website/Contact.html">Contact Us</a> 
+        </nav>
+        </div>
+    <!-- <section>
+        <a href="/Website/BookAppointment.html">
+            <div class="button">
+                <button class="button">Book an Appointment</button>
+        </a>
+        </div>
+    </section> -->
+    <section>
+        <div class="doctor-category">
+            <h2> Cardiologists</h2>
+            <div class="doctor-info">
+                <a href="/Website/Cardiologist.html">
+                    <img src="https://th.bing.com/th/id/OIP.6kc9kSZ57gnJgISEHKPUlQHaE8?rs=1&pid=ImgDetMain"
+                        alt="Cardiologist" width="100" height="100">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Neurologists</h2>
+            <div class="doctor-info">
+                <a href="/Website/Neurologists.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-pDjnmSkmMh1fIDp3OvJT1B_PY-FI_KAYRR0D2JOA3GpXrZTLOGhpwEt-ivn6r0tRis&usqp=CAU"
+                        alt="Neurologist">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Pediatricians</h2>
+            <div class="doctor-info">
+                <a href="/Website/Pediatricians.html">
+                    <img src="https://www.myhspediatrics.com/wp-content/uploads/2020/01/Holly-Springs_Choosing-a-Pediatrician-1024x536.jpeg"
+                        alt="Pediatrician">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Orthopedicans</h2>
+            <div class="doctor-info">
+                <a href="/Website/Orthopedicians.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5laJrbZ5UHMw55Ac_PQtvdJYiNmHRarICjg&usqp=CAU"
+                        alt="Orthopedicans">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Robotic Surgery</h2>
+            <div class="doctor-info">
+                <a href="/Website/Robotic_Surgery.html">
+                    <img src="https://wp.technologyreview.com/wp-content/uploads/2020/02/robot-surgeons-1-2.jpg"
+                        alt="Robotic Surgery">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Obesity Surgery</h2>
+            <div class="doctor-info">
+                <a href="/Website/Obesity_Surgery.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJutfXMk1aiVqhsGRFTPIBv-0kde8OqrFi2A&usqp=CAU"
+                        alt="Obesity Surgery">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Diagnostics</h2>
+            <div class="doctor-info">
+                <a href="/Website/Diagnostics.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHVSuch8wXy3qPv4UwR9e_rIaicuo5Iyf5zQ&usqp=CAU"
+                        alt="Diagnostics">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Transplants</h2>
+            <div class="doctor-info">
+                <a href="/Website/Transplants.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ3obJm_riIeANPIK-owRuq4NYGN_k1wqR9w&usqp=CAU"
+                        alt="Transplants">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>International Radiology</h2>
+            <div class="doctor-info">
+                <a href="/Website/International_Radiology.html">
+                    <img src="https://www.radiology.expert/content/images/sfeerfotos/resized/RadiologyExpert_Home2_640x500.jpg"
+                        alt="International Radiolog">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>ENT</h2>
+            <div class="doctor-info">
+                <a href="/Website/ENT.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrlyhzGMRpKgWCKb9fMYugYJLDSXAMhZztPQ&usqp=CAU"
+                        alt="ENT">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Cancer Treatment</h2>
+            <div class="doctor-info">
+                <a href="/Website/Cancer_Treatment.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Dc-CoWwYgrTI6wspTlCj0zs5BmAqxHDFgg&usqp=CAU"
+                        alt="Cancer Treatment">
+                </a>
+            </div>
+        </div>
+        <div class="doctor-category">
+            <h2>Spine Surgery</h2>
+            <div class="doctor-info">
+                <a href="/Website/Spine_Surgery.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3_snKWeaYjizPNTmRSh09ipcjbDUrcPHV-w&usqp=CAU"
+                        alt="Spine Surgery">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: #333; margin-top:120px;">
+        <section id="foot" style="margin:-50px -50px 0px 0px" ;>
+            <div id="footer-content" style=" margin-top: 100px;">
+                <p style="color: white;margin-top: -70px;margin-left: -550px;">&copy; 2024 Your company</p>
+                <div class="Services" style="width: 600px;">
+                    <h4
+                        style="color: white;background-color: #164362; width: 300px;padding: 15px 20px;font-size: 15px;margin: 35px 30px 30px -450px;">
+                        Services <br><br>
+                        <ol type="none" style="line-height: 10px;">
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Cardiologist</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Nuerologist</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Pediatricians</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Orthopedicans</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Robotic Surgery</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Diagnostics</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Cancer treatment</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">International radiology</a1>
+                            </li>
+                        </ol>
+                    </h4>
+                </div>
+            </div>
+        </section>
+        <section id="foot1" style="margin: -585px 0px 10px 0px;">
+            <div id="partners">
+                <div class="part" style="width: 900px;">
+                    <h4
+                        style="color: white;background-color: #164362; width:300px; padding: 15px 20px;font-size: 15px;margin-left: 120px;">
+                        Our Partners<br><br>
+                        <ol type="none">
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="https://www.apollohospitals.com/">Apollo Hospital</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Asian Hospital</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">AIIMS Delhi</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Batra Hospital</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Medanta Hospital</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Fortis Hospitals Group</a1>
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">
+                                <a1 href="">Max super speciality hospital</a1>
+                            </li>
+                        </ol>
+                </div>
+            </div>
+        </section>
+        <section id="foot2" style="margin:-570px 0px 400px 80px; height: 1100px;">
+            <div id="contact">
+                <div class="cont" style="width: 1200px;margin-right: 100px;">
+                    <h4
+                        style="color: white;background-color: #164362; width: 250px;padding: 15px 20px;font-size: 15px;margin-left: 1000px;">
+                        Contact Us
+                        <ol type="none">
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Helpline No-9475884667
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Post a Query</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Consult Doctors Online
+                            </li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Book Appointment</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Give your Feedback</li>
+                        </ol>
+                    </h4>
+
+                </div>
+            </div>
+        </section>
+        <section id="foot3" style="margin:-1535px 0px 600px 150px; height: 800px;">
+            <div id="contacts">
+                <div class="cont" style="width: 1200px;margin-right: 500px;">
+                    <h4
+                        style="color: white;background-color: #164362; width: 250px;padding: 20px 20px;font-size: 15px;margin: 10px 0px 10px 750px;">
+                        News & Media
+                        <ol type="none">
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">News</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Events</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Interviews</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Watch our videos</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Media Contacts</li>
+                            <li style="padding-top: 20px;padding-bottom: 20px;cursor: pointer;">Hospitals Reviews</li>
+                        </ol>
+                    </h4>
+                </div>
+        </section>
+    </footer>
+</body>
+
+</html>

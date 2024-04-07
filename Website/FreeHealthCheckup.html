@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Health Checkup Camp</title>
+    <style>
+         body {
+        margin-top: 13%;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  background-color: #f8f8f8;
+         }
+         table{
+            float: left;
+            width: 50%;
+            border-collapse: collapse;
+            margin-top:5% ;
+            margin-left: 4%;
+         }
+         th{
+            background-color: rgb(182, 182, 242);
+         }
+         th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+         .camp{
+    margin-left: 63%;
+}
+         form {
+    background-color: rgb(148, 247, 214);
+    margin-left: 60%;
+  max-width: 40%;
+  margin-right: 5%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    display: flexbox;
+    width: 95%;
+  margin-bottom: 20px;
+  border: 1.5px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="name"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1.5px solid #005cf0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+    border: 1.5px solid #005cf0;
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  margin-left: 45%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    padding: 10px;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Camps available</th>
+                <th>Capacity</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Delhi</td>
+                <td>3</td>
+                <td>50</td>
+                <td>10th March,2024</td>
+            </tr>
+            <tr>
+                <td>Faridabad</td>
+                <td>2</td>
+                <td>100</td>
+                <td>12th March,2024</td>
+            </tr>
+            <tr>
+                <td>Jaipur</td>
+                <td>5</td>
+                <td>100</td>
+                <td>15th March,2024</td>
+            </tr>
+            <tr>
+                <td>Kerala</td>
+                <td>5</td>
+                <td>40</td>
+                <td>17th March,2024</td>
+            </tr>
+            <tr>
+                <td>Lucknow</td>
+                <td>5</td>
+                <td>50</td>
+                <td>18th March,2024</td>
+            </tr>
+            <tr>
+                <td>Gujarat</td>
+                <td>3</td>
+                <td>100</td>
+                <td>20th March,2024</td>
+            </tr>
+            <tr>
+                <td>UP</td>
+                <td>3</td>
+                <td>100</td>
+                <td>15th March,2024</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <h1 class="camp">Medical Camp Booking Form</h1>
+    <form action="submit.php" method="post">
+      <fieldset>
+          <legend>Camp Details</legend>
+          <label for="Campname">Camp Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="category">Camp Category</label>
+          <input type="text" id="category" name="category" required>
+          
+        </fieldset>
+      <fieldset>
+        <legend>Village Information</legend>
+        <label for="village">Village Name:</label>
+        <input type="text" id="village" name="village" required>
+        <label for="location">Location Details:</label>
+        <textarea id="location" name="location" required></textarea>
+        <label for="pincode">PinCode</label>
+        <input type="number" id="pincode" name="pincode" required>
+        <label for="landmark">Landmark</label>
+        <input type="text" id="Landmark" name="Landmark" required>
+      </fieldset>
+      <fieldset>
+          <legend>Disease Focus</legend>
+          <label for="id">Disease Focus</label>
+          <input type="text" id="disease" name="disease" required>
+          
+        </fieldset>
+      <fieldset>
+          <legend>Sarpanch Details</legend>
+          <label for="id">Sarpanch ID</label>
+          <input type="number" id="number" name="number" required>
+          <label for="name">Name</label>
+          <input type="name" id="name" name="name" required>
+          <label for="mobile">Mobile No.</label>
+          <input type="number" id="number" name="number" required>
+        </fieldset>
+      <fieldset>
+        <legend>Date and Time</legend>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </fieldset>
+      <fieldset>
+        <legend>Target Population</legend>
+        <label for="Population">Population</label>
+        <input type="number" id="population" name="population" required>
+        <label for="Minimumage">Minimum Age Group</label>
+          <input type="number" id="Minimum Age Group" name="Minimum Age Group" required>
+          <label for="Maximumage">Maximum Age Group</label>
+          <input type="number" id="Maximum Age Group" name="Maximum Age Group" required>
+      </fieldset>
+      <!-- Add more fieldsets for other details as needed -->
+      <input type="submit" value="Submit">
+</body>
+</html>

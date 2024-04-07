@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment Form</title>
+<link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<style>
+ body{
+        background-color: #d9dddf;
+    }
+    nav {
+        background-color: #164362;
+        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 10px;
+        
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+    }
+    .nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+header {
+        color: black;
+        background-color: white;
+        
+        padding: 10px 0;
+        text-align: center;
+    }
+    .container {
+    background-color: lightgray;
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 55px;
+    border: 10px solid #164362;
+    box-shadow: #5c90b3;
+    border-radius: 55px;
+    }
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  width: max-content;
+  margin-left: 170px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+button {
+  max-width: fit-content;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-left: 254px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.otp-group {
+  display: none;
+}
+select, button {
+  width: 105%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+</style>
+<body>
+  <header>
+    <h1>ﮩ٨ـﮩﮩ٨ـHealthy Indiaﮩ٨ـﮩﮩ٨ـ</h1>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Virtual Consultant</a>
+    <a href="#">Mobile Health Clinic</a>
+    <a href="#">HIE Sysytem</a>
+</nav>
+
+<div class="container">
+  <form id="hospitalForm"  action="https://script.google.com/macros/s/AKfycbwIRvfd0dRdHs1balWU3nkNjptH3Dp_eZ-fgEm3vDKgIFV4yE4LPQMd9YOErVuRM1Fy/exec" method="post">
+    
+    <h1>Book Appointment Form</h1>
+    <div class="form-group">
+        <label for="city">City:</label>
+        <select id="city" name="city">
+          <option value="">Select City</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Faridabad">Faridabad</option>
+          <option value="Patna">Patna</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Pune">Pune</option>
+          <option value="Ahemdabad">Ahemdabad</option>
+          <option value="Surat">Surat</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Indore">Indore</option>
+          <option value="Thane">Thane</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Vadodara">Vadodara</option>
+          <option value="Ghaziabad">Ghaziabad</option>
+        </select>
+  
+      </div>
+    <div class="form-group" >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group" >
+      <label for="date">Date & Time</label>
+      <input type="datetime-local" id="name" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="specialization">Specialization Doctor:</label>
+                <select id="specialization" name="specialization" required>
+                    <option value="">Select Specialization</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Orthopedicans">Orthopedicans</option>
+                    <option value="Robotic Surgery">Robotic_Surgery</option>
+                    <option value="Obesity Surgery">Obesity_Surgery</option>
+                    <option value="Diagnostics">Diagnostics</option>
+                    <option value="Transplants">Transplants</option>
+                    <option value="International Radiology">International_Radiology</option>
+                    <option value="ENT">ENT</option>
+                    <option value="Cancer Treatment">Cancer_Treatment</option>
+                    <option value="Spine Surgery">Spine_Surgery</option>
+                </select>
+    </div>
+    <!-- <div class="form-group">
+      <button type="button" onclick="sendOTP()">Send OTP</button>
+    </div> -->
+    <!-- <div class="form-group otp-group">
+      <label for="otp">Enter OTP:</label>
+      <input type="text" id="otp" name="otp" required disabled>
+    </div> -->
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+//      function sendOTP() {
+//    var phoneInput = document.getElementById('phone');
+//    var otpGroup = document.querySelector('.otp-group');
+//    otpGroup.style.display = 'block';
+//    alert('OTP sent to ' + phoneInput.value);
+  
+//  }
+// function submitForm(event) {
+//   event.preventDefault();
+//   alert("Form submitted successfully!");
+// }
+
+</script> 
+
+</body>
+</html>

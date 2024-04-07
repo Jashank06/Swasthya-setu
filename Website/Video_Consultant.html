@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Consultant Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body{
+        background-image: url("img/back.jpg");
+    }
+    nav {
+        background-color: #164362;
+        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 10px;
+        
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+    }
+    .nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+header {
+        color: black;
+        background-color: white;
+        
+        padding: 10px 0;
+        text-align: center;
+    }
+    .container {
+    background-color: lightgray;
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 55px;
+    border: 35px solid #164362;
+    border-radius: 55px;
+    }
+h2 {
+    text-align: center;
+}
+.Name{
+    width: 238px;
+    margin: 69px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 171px;
+    margin-right: 31px;
+}
+.Mobile{
+    width: 285px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 23px;
+    margin-left: 147px;
+    margin-right: 30px;
+}
+.Date{
+    width: 479px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+.Specialization{
+    width: 283px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 30px;
+}
+.Email{
+    width: 283px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    margin-left: 245px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div class="container" onsubmit="submitForm(event)">
+        <h2>Video Consultant Form</h2>
+        <form action="https://script.google.com/macros/s/AKfycbyXJRcQfetNCWhikYOv_3J4xy9H_ctAfBLq0tI41CpGa6ObXFwaXTTJ8peZjUOncm0q/exec" method="post">
+            <div class="Name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="Mobile">
+                <label for="mobile">Mobile No.:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+            <div class="Date">
+                <label for="Date">Date:</label>
+                <input type="datetime-local" id="date" name="date" required>
+            </div>
+            <div class="Email">
+                <label for="email">Email ID:</label>
+                <input type="email" name="email" required>
+            </div> 
+            <div class="Specialization">
+                <label for="specialization">Specialization Doctor:</label>
+                <select id="specialization" name="specialization" required>
+                    <option value="">Select Specialization</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Orthopedicans">Orthopedicans</option>
+                    <option value="Robotic Surgery">Robotic_Surgery</option>
+                    <option value="Obesity Surgery">Obesity_Surgery</option>
+                    <option value="Diagnostics">Diagnostics</option>
+                    <option value="Transplants">Transplants</option>
+                    <option value="International Radiology">International_Radiology</option>
+                    <option value="ENT">ENT</option>
+                    <option value="Cancer Treatment">Cancer_Treatment</option>
+                    <option value="Spine Surgery">Spine_Surgery</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // function submitForm(event) {
+        //   event.preventDefault();
+        //   alert("Form submitted successfully!");
+        // }
+        </script>
+</body>
+</html>

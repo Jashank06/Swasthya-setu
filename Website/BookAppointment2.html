@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Appointment</title>
+    <style>
+        body, html {
+            background-image: url(img/back.jpg);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('imgg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
+form {
+    background: rgba(255, 255, 255, 0.7); /* Increased transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjust based on your preference */
+    max-width: 500px; /* Ensures form doesn't get too wide on large screens */
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select,
+input[type="submit"] {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .form-group select {
+        width: 90%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+input[type="submit"] {
+    background-color: #0056b3;
+        color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color:#0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="https://script.google.com/macros/s/AKfycbwIRvfd0dRdHs1balWU3nkNjptH3Dp_eZ-fgEm3vDKgIFV4yE4LPQMd9YOErVuRM1Fy/exec" method="post">
+            <div class="container">
+        <h2>Book Your Appointment</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+
+            <!-- <label for="service">Service:</label>
+            <select id="service" name="service">
+                <option value="service1">Service 1</option>
+                <option value="service2">Service 2</option>
+                <option value="service3">Service 3</option>
+            </select> -->
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <input type="submit" value="Book Appointment">
+        </form>
+    </div>
+</body>
+</html>

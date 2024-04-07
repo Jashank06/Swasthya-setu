@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Header and Navigation</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+  }
+  nav {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+    overflow-y: auto;
+  }
+  .content {
+    margin-left: 220px; /* Adjust this value based on your nav width */
+    padding: 20px;
+  }
+  .content p {
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fixed Header</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+    <!-- Add more navigation links here -->
+  </ul>
+</nav>
+
+<div class="content">
+  <h2>Content Area</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacus sem. Curabitur aliquet lorem vel consequat vestibulum. Integer eget nulla a dui lacinia cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi tempus, elit nec venenatis molestie, odio ligula maximus lacus, nec facilisis orci turpis et mi. Duis consectetur ipsum et consequat tincidunt.</p>
+  <p>Sed eget massa vel ante tristique laoreet non eu ipsum. Aliquam vitae ante nec nisl mollis dignissim sed in ipsum. Nulla posuere, elit nec egestas egestas, eros dolor fermentum est, id tristique velit enim at ante. Proin fermentum odio et turpis ultrices, nec faucibus nisl venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vel ligula sit amet felis bibendum suscipit.</p>
+  <!-- Add more content here -->
+</div>
+
+</body>
+</html>
